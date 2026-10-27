@@ -9,10 +9,11 @@ import { RouterLink } from '@angular/router';
     <!-- HERO -->
     <section class="hero">
       <span class="badge">✨ Propulsé par Angular</span>
-      <h1>Construisez des interfaces <span class="gradient-text">modernes</span> et rapides</h1>
+      <h1>Prise en main du Framework Frontend  <span class="gradient-text">AngularJS</span></h1>
       <p class="lead">
-        Une petite application de démonstration avec routing, composants
-        standalone et un compteur interactif.
+        Dans le cadre du cours de Développement d'interfaces Web Frontend,
+        l'equipe de developpement chargé de cette prise en a opté pour le framework
+        <span class="gradient-text">AngularJS</span>. De ce fait vous pouvez essayer notre compteur interactif !
       </p>
 
       <div class="hero-actions">

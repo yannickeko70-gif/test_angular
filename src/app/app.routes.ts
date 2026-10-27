@@ -5,3 +5,4 @@ export const routes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'contact', component: ContactComponent },
 ];
+ 

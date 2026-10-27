@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
         </button>
 
         @if (envoye) {
-          <p class="succes">Merci {{ nom }}, message envoyé ✅</p>
+          <p class="succes">Merci {{ nom }} ! Message envoyé avec succès !! <i></i></p>
         }
       </div>
     </section>
