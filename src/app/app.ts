@@ -1,12 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
+  template: `
+    <nav style="display:flex;gap:16px;padding:12px;background:#eee">
+      <a routerLink="/">Accueil</a>
+      <a routerLink="/contact">Contact</a>
+    </nav>
+    <router-outlet />
+  `,
 })
-export class App {
-  protected readonly title = signal('mon-premier-projet');
-}
+export class AppComponent {}
