@@ -1,16 +1,26 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
-    <nav style="display:flex;gap:16px;padding:12px;background:#eee">
-      <a routerLink="/">Accueil</a>
-      <a routerLink="/contact">Contact</a>
-    </nav>
-    <router-outlet />
+    <header class="navbar">
+      <div class="navbar-inner">
+        <nav class="links">
+          <a routerLink="/" routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+          <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </nav>
+
+      </div>
+    </header>
+
+    <main>
+      <router-outlet />
+    </main>
   `,
+  styleUrl: './app.css',
 })
 export class AppComponent {}
