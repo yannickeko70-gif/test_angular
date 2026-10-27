@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   template: `
     <div style="padding:20px;text-align:center">
-      <h1>Bienvenue 👋</h1>
+      <h1>Bienvenue</h1>
       <p>Compteur : {{ compteur }}</p>
       <button (click)="compteur = compteur + 1">+1</button>
       <button (click)="compteur = compteur - 1">-1</button>
