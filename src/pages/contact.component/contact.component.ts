@@ -7,24 +7,27 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   template: `
     <section class="contact">
-      <h1>Contactez-nous</h1>
+      <h1><i class="fa-solid fa-address-book"></i> Contactez-nous</h1>
       <p class="subtitle">Une question ? Écrivez-nous.</p>
 
       <div class="card">
-        <label for="nom">Nom</label>
+        <label for="nom"><i class="fa-solid fa-user"></i> Nom</label>
         <input id="nom" [(ngModel)]="nom" placeholder="Votre nom" />
 
-        <label for="message">Message</label>
+        <label for="message"><i class="fa-solid fa-message"></i> Message</label>
         <textarea id="message" rows="5" [(ngModel)]="message"
                   placeholder="Votre message..."></textarea>
 
         <button class="btn-envoyer" (click)="envoyer()"
                 [disabled]="!nom || !message">
-          Envoyer
+          <i class="fa-solid fa-paper-plane"></i> Envoyer
         </button>
 
         @if (envoye) {
-          <p class="succes">Merci {{ nom }} ! Message envoyé avec succès !! <i></i></p>
+          <p class="succes">
+            <i class="fa-solid fa-circle-check"></i>
+            Merci {{ nom }} ! Message envoyé avec succès !!
+          </p>
         }
       </div>
     </section>

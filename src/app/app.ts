@@ -10,10 +10,13 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
       <div class="navbar-inner">
         <nav class="links">
           <a routerLink="/" routerLinkActive="active"
-             [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
-          <a routerLink="/contact" routerLinkActive="active">Contact</a>
+             [routerLinkActiveOptions]="{ exact: true }">
+            <i class="fa-solid fa-house"></i> Accueil
+          </a>
+          <a routerLink="/contact" routerLinkActive="active">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
         </nav>
-
       </div>
     </header>
 

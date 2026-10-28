@@ -1,1 +1,60 @@
-<p>accueil.component works!</p>
+<!-- HERO -->
+<section class="hero">
+  <span class="badge"><i class="fa-brands fa-angular"></i> Propulsé par Angular</span>
+  <h1>Prise en main du Framework Frontend  <span class="gradient-text">AngularJS</span></h1>
+  <p class="lead">
+    Dans le cadre du cours de Développement d'interfaces Web Frontend,
+    l'equipe de developpement chargé de cette prise en a opté pour le framework
+    <span class="gradient-text">AngularJS</span>. De ce fait vous pouvez essayer notre compteur interactif !
+  </p>
+
+  <div class="hero-actions">
+    <a routerLink="/contact" class="btn-primary">
+      <i class="fa-solid fa-envelope"></i> Nous contacter
+    </a>
+    <a href="#compteur" class="btn-ghost">
+      Essayer le compteur <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </div>
+</section>
+
+<!-- COMPTEUR -->
+<section class="counter-section" id="compteur">
+  <div class="counter-card">
+    <p class="counter-label"><i class="fa-solid fa-calculator"></i> Compteur interactif</p>
+
+    <div class="counter-value"
+         [class.negative]="compteur < 0"
+         [class.zero]="compteur === 0">
+      {{ compteur }}
+    </div>
+
+    <div class="counter-actions">
+      <button class="round minus" (click)="compteur = compteur - 1"
+              aria-label="Retirer 1">
+        <i class="fa-solid fa-minus"></i>
+      </button>
+      <button class="round plus" (click)="compteur = compteur + 1"
+              aria-label="Ajouter 1">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <button class="reset" (click)="compteur = 0">
+      <i class="fa-solid fa-rotate-left"></i> Réinitialiser
+    </button>
+  </div>
+</section>
+
+<!-- CARTES -->
+<section class="features">
+  @for (f of features; track f.titre) {
+    <article class="feature">
+      <div class="feature-icon">
+        <i class="{{ f.icone }}"></i>
+      </div>
+      <h3>{{ f.titre }}</h3>
+      <p>{{ f.texte }}</p>
+    </article>
+  }
+</section>

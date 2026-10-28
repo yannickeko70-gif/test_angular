@@ -5,65 +5,15 @@ import { RouterLink } from '@angular/router';
   selector: 'app-accueil',
   standalone: true,
   imports: [RouterLink],
-  template: `
-    <!-- HERO -->
-    <section class="hero">
-      <span class="badge">✨ Propulsé par Angular</span>
-      <h1>Prise en main du Framework Frontend  <span class="gradient-text">AngularJS</span></h1>
-      <p class="lead">
-        Dans le cadre du cours de Développement d'interfaces Web Frontend,
-        l'equipe de developpement chargé de cette prise en a opté pour le framework
-        <span class="gradient-text">AngularJS</span>. De ce fait vous pouvez essayer notre compteur interactif !
-      </p>
-
-      <div class="hero-actions">
-        <a routerLink="/contact" class="btn-primary">Nous contacter</a>
-        <a href="#compteur" class="btn-ghost">Essayer le compteur ↓</a>
-      </div>
-    </section>
-
-    <!-- COMPTEUR -->
-    <section class="counter-section" id="compteur">
-      <div class="counter-card">
-        <p class="counter-label">Compteur interactif</p>
-
-        <div class="counter-value"
-             [class.negative]="compteur < 0"
-             [class.zero]="compteur === 0">
-          {{ compteur }}
-        </div>
-
-        <div class="counter-actions">
-          <button class="round minus" (click)="compteur = compteur - 1"
-                  aria-label="Retirer 1">−</button>
-          <button class="round plus" (click)="compteur = compteur + 1"
-                  aria-label="Ajouter 1">+</button>
-        </div>
-
-        <button class="reset" (click)="compteur = 0">Réinitialiser</button>
-      </div>
-    </section>
-
-    <!-- CARTES -->
-    <section class="features">
-      @for (f of features; track f.titre) {
-        <article class="feature">
-          <div class="feature-icon">{{ f.icone }}</div>
-          <h3>{{ f.titre }}</h3>
-          <p>{{ f.texte }}</p>
-        </article>
-      }
-    </section>
-  `,
+  templateUrl: './accueil.component.html', // <--- CHANGEMENT ICI
   styleUrl: './accueil.component.css',
 })
 export class AccueilComponent {
   compteur = 0;
 
   features = [
-    { icone: '⚡', titre: 'Rapide', texte: 'Des composants légers qui se chargent instantanément.' },
-    { icone: '🧩', titre: 'Modulaire', texte: 'Chaque page est un composant indépendant et réutilisable.' },
-    { icone: '🎨', titre: 'Élégant', texte: 'Un design propre, responsive et facile à personnaliser.' },
+    { icone: 'fa-solid fa-bolt', titre: 'Rapide', texte: 'Des composants légers qui se chargent instantanément.' },
+    { icone: 'fa-solid fa-puzzle-piece', titre: 'Modulaire', texte: 'Chaque page est un composant indépendant et réutilisable.' },
+    { icone: 'fa-solid fa-palette', titre: 'Élégant', texte: 'Un design propre, responsive et facile à personnaliser.' },
   ];
 }
-

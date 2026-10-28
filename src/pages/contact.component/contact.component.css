@@ -83,3 +83,21 @@ textarea {
   border-radius: 10px;
   font-weight: 600;
 }
+label i {
+  color: var(--primary);
+  margin-right: 6px;
+}
+
+.btn-envoyer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.succes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
